@@ -37,6 +37,7 @@
 
     <uses-permission android:name="com.mile.stone.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- android:usesCleartextTraffic="true" -->
     <!-- android:networkSecurityConfig="@xml/network_security_config" -->
+    <!-- android:usesCleartextTraffic="true" -->
     <application
         android:name="android.app.Application"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -44,7 +45,7 @@
         android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"
         android:label="MileStone"
-        android:usesCleartextTraffic="true" >
+        android:networkSecurityConfig="@xml/network_security_config" >
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />

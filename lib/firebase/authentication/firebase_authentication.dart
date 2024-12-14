@@ -6,13 +6,18 @@ class FirebaseAuthentication{
   static final auth = getFirebaseAuthInstance();
 
   static FirebaseAuth getFirebaseAuthInstance(){
-    return FirebaseAuth.instance;
+    // return FirebaseAuth.instance.useAuthEmulator("10.0.2.2", 9099);
+    FirebaseAuth auth = FirebaseAuth.instance;
+    auth.useAuthEmulator("10.0.2.2", 9099);
+    return auth;
   }
 
   static Future <dynamic> createUserWithEmailAndPassword({required String email, required String password}) async{
+    FirebaseAuth auth = FirebaseAuth.instance;
+    auth.useAuthEmulator("10.0.2.2", 9099);
     var credential;
     try {
-      final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      credential = await  auth.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
@@ -21,7 +26,27 @@ class FirebaseAuthentication{
         print('The password provided is too weak.');
       } else if (e.code == 'email-already-in-use') {
         print('The account already exists for that email.');
+      }else{
+        print(e);
       }
+    } catch (e) {
+      print(e);
+    }
+
+    return credential;
+  }
+
+  static Future <dynamic> sendmessage({required String email, required String password}) async{
+    FirebaseAuth auth = FirebaseAuth.instance;
+    auth.useAuthEmulator("10.0.2.2", 9099);
+    var credential;
+    try {
+      // var listener =
+      //     FirebaseDatabase.instance.ref().child("test").onValue.listen((d) {
+      //       print(d.snapshot.value);
+      //     });
+    } on FirebaseAuthException catch (e) {
+      print('firebase authe exception :  $e .');
     } catch (e) {
       print(e);
     }
@@ -41,6 +66,8 @@ class FirebaseAuthentication{
         print('No user found for that email.');
       } else if (e.code == 'wrong-password') {
         print('Wrong password provided for that user.');
+      }else{
+        print(e);
       }
     }
 
