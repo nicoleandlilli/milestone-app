@@ -1,0 +1,1 @@
+ /Users/mac/AndroidStudioProjects/milestone-app/.dart_tool/flutter_build/59d2de8e9a07eb2d382be5f11a90198e/native_assets.yaml: 
