@@ -10,9 +10,12 @@ plugins {
 
 android {
     namespace = "com.mile.stone"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
-    useLibrary 'org.apache.http.legacy'
+//    compileSdk = flutter.compileSdkVersion
+    compileSdk = 34
+//    ndkVersion = flutter.ndkVersion
+    ndkVersion = "27.0.12077973"
+
+//    useLibrary 'org.apache.http.legacy'
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
