@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "249341098212",
+    "project_id": "milestone-app-ac5a2",
+    "storage_bucket": "milestone-app-ac5a2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249341098212:android:3abfc01a2fd21c772714f1",
+        "android_client_info": {
+          "package_name": "com.mile.stone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD08umHWBDs98AA2oJ1EjgpTr-moX9FgKY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
