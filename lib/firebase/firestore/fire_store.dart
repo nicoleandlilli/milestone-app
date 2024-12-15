@@ -9,9 +9,9 @@ class FireStore{
   static void addUser(int i){
     // Create a new user with a first and last name
     final user = <String, dynamic>{
-      "first": "Ada$i",
-      "last": "Lovelace",
-      "born": 1815+i
+      "name": "Ada$i",
+      "hobby": "Lovelace$i",
+      "age": "I'm $i years' old"
     };
 
 // Add a new document with a generated ID
@@ -25,6 +25,10 @@ class FireStore{
         print("${doc.id} => ${doc.data()}");
       }
     });
+  }
+
+  static Stream<QuerySnapshot<Map<String, dynamic>>> getUserSnapshots(){
+    return db.collection('users').snapshots();
   }
 
   void getMessages(String collectionPath) async {
