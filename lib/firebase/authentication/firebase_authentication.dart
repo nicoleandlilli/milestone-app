@@ -73,4 +73,17 @@ class FirebaseAuthentication{
 
     return credential;
   }
+
+  void getCurrentUser() async{
+    try{
+      final User? user = await auth.currentUser;
+      if(user != null){
+        User loggedInUser = user;
+        print('logged In User email is : ${loggedInUser.email}');
+      }
+    }catch(e){
+      print(e);
+    }
+  }
+
 }
