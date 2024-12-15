@@ -68,3 +68,11 @@ node_modules/
 # dataconnect generated files
 .dataconnect
 
+.flutter-plugins-dependencies
+.last_build_id
+
+.dart_tool
+build
+last_build_run.json
+*.cache.dill.track.dill
+
