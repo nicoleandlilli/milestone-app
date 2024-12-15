@@ -16,18 +16,18 @@ import 'package:flutter/foundation.dart'
 /// ```
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
-    if (kIsWeb) {
-      return web;
-    }
+    // if (kIsWeb) {
+    //   return web;
+    // }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
         return ios;
-      case TargetPlatform.macOS:
-        return macos;
-      case TargetPlatform.windows:
-        return windows;
+      // case TargetPlatform.macOS:
+      //   return macos;
+      // case TargetPlatform.windows:
+      //   return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -40,15 +40,6 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDKfrSdb0859cpS7uEE4El_1xxVIteFUv8',
-    appId: '1:249341098212:web:63a7406e34ed66002714f1',
-    messagingSenderId: '249341098212',
-    projectId: 'milestone-app-ac5a2',
-    authDomain: 'milestone-app-ac5a2.firebaseapp.com',
-    storageBucket: 'milestone-app-ac5a2.firebasestorage.app',
-    measurementId: 'G-HYGL47TKJ7',
-  );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyD08umHWBDs98AA2oJ1EjgpTr-moX9FgKY',
@@ -67,23 +58,5 @@ class DefaultFirebaseOptions {
     iosBundleId: 'com.example.untitled1',
   );
 
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDN_zt_gueuGLQhVLk4rWH297WCmp7vWjs',
-    appId: '1:249341098212:ios:09e3abdf54d52b802714f1',
-    messagingSenderId: '249341098212',
-    projectId: 'milestone-app-ac5a2',
-    storageBucket: 'milestone-app-ac5a2.firebasestorage.app',
-    iosBundleId: 'com.example.untitled1',
-  );
-
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyDKfrSdb0859cpS7uEE4El_1xxVIteFUv8',
-    appId: '1:249341098212:web:3b9b7eda5c40fe252714f1',
-    messagingSenderId: '249341098212',
-    projectId: 'milestone-app-ac5a2',
-    authDomain: 'milestone-app-ac5a2.firebaseapp.com',
-    storageBucket: 'milestone-app-ac5a2.firebasestorage.app',
-    measurementId: 'G-RRBJC69X8K',
-  );
 
 }
