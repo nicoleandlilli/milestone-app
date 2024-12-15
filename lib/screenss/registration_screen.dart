@@ -65,7 +65,7 @@ class RegistrationScreenState extends State<RegistrationScreen>{
                 RoundedButton(
                     title: 'Register',
                     color: Colors.lightBlueAccent,
-                    onPressed: () async {
+                    onPressed: ()  {
                       print("press button");
                       final newUser = FirebaseAuthentication.createUserWithEmailAndPassword(
                           email: email, password: password);
