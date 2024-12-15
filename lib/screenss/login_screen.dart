@@ -7,7 +7,7 @@ import 'package:untitled1/screenss/registration_screen.dart';
 import '../firebase/authentication/firebase_authentication.dart';
 import '../firebase/components/round_botton.dart';
 import '../firebase/constants/constants.dart';
-import 'chat_screen.dart';
+import 'firestore_screen.dart';
 class LoginScreen extends StatefulWidget {
   static const String id = 'login_screen';
 

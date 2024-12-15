@@ -5,7 +5,7 @@ import 'package:untitled1/screenss/login_screen.dart';
 import '../firebase/authentication/firebase_authentication.dart';
 import '../firebase/components/round_botton.dart';
 import '../firebase/constants/constants.dart';
-import 'chat_screen.dart';
+import 'firestore_screen.dart';
 
 
 class RegistrationScreen extends StatefulWidget{
@@ -72,7 +72,7 @@ class RegistrationScreenState extends State<RegistrationScreen>{
                       print(newUser);
                       if(newUser!=null){
                         // Navigator.pushNamed(context, LoginScreen.id);
-                        Navigator.pushNamed(context, ChatScreen.id);
+                        Navigator.pushNamed(context, FireStoreScreen.id);
                       }
                     }),
               ],

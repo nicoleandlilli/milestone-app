@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:untitled1/firebase/firebase.dart';
-import 'package:untitled1/screenss/chat_screen.dart';
+import 'package:untitled1/screenss/firestore_screen.dart';
 import 'package:untitled1/screenss/login_screen.dart';
 import 'package:untitled1/screenss/registration_screen.dart';
 Future <void> main() async{
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
       routes: {
         LoginScreen.id: (context) => LoginScreen(),
         RegistrationScreen.id: (context) => RegistrationScreen(),
-        ChatScreen.id: (context) => ChatScreen(),
+        FireStoreScreen.id: (context) => FireStoreScreen(),
       },
     );
   }
