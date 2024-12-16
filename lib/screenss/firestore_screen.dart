@@ -29,6 +29,16 @@ class FireStoreScreenState extends State<FireStoreScreen> {
 
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        // leading: Icons.arrow_back_ios,
+        // actions: <Widget>[
+        //   IconButton(onPressed: (){
+        //     Navigator.pop(context);
+        //   }, icon: Icon(Icons.close)),
+        // ],
+        title: Text('Firebase Cloud'),
+        backgroundColor: Colors.lightBlueAccent,
+      ),
       body: SafeArea(
           child: Container(
         child: Center(
@@ -155,7 +165,7 @@ class MessageBubble extends StatelessWidget {
           children: [
             Padding(
               padding:
-              const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+              const EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
               child: Text(
                 name,
                 style: TextStyle(
@@ -166,7 +176,7 @@ class MessageBubble extends StatelessWidget {
             ),
             Padding(
               padding:
-              const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+              const EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
               child: Text(
                 hobby,
                 style: const TextStyle(
@@ -177,7 +187,7 @@ class MessageBubble extends StatelessWidget {
             ),
             Padding(
               padding:
-              const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+              const EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
               child: Text(
                 "$age",
                 style: const TextStyle(

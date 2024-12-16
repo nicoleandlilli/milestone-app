@@ -25,6 +25,17 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        leading: null,
+        // actions: <Widget>[
+        //   IconButton(onPressed: (){
+        //     _auth.signOut();
+        //     Navigator.pop(context);
+        //   }, icon: Icon(Icons.close)),
+        // ],
+        title: Text('MileStone'),
+        backgroundColor: Colors.lightBlueAccent,
+      ),
       body: Container(
         child: Center(
           child: Padding(
